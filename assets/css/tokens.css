@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Yesenia Vargas Hair — 1/4 TOKENS
+   Fuente: Cromática oficial Yesenia Vargas (PDF) + página académica.
+   En WordPress: se carga primero desde el tema hijo (functions.php → wp_enqueue_style).
+   ========================================================================== */
+
+/* --- Tipografías del manual ------------------------------------------------
+   Versión de previsualización: GC Amelie Promised sustituida por Playfair Display
+   (Google Fonts) hasta comprar la licencia web.
+   Barlow — SIL Open Font License (libre).                                  */
+@font-face{font-family:'Barlow';src:url('../fonts/barlow-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('../fonts/barlow-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('../fonts/barlow-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Barlow';src:url('../fonts/barlow-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('../fonts/barlow-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+
+:root{
+  /* Marca — Cromática oficial (proporción de uso) */
+  --yv-soft-blonde:#f3e8dd;   /* 45% fondo base */
+  --yv-copper-comb:#8c5a3c;   /* 5% acentos */
+  --yv-mocha-maroon:#501f11;  /* 5% titulares sobre claro */
+  --yv-brunette-pro:#2d110a;  /* 40% texto, hero, footer */
+  --yv-texture-gradient:linear-gradient(160deg,#8c5a3c 0%,#501f11 55%,#2d110a 100%);
+
+  /* Derivados de la página académica (no están en el manual) */
+  --yv-gold:#c79a6a;          /* relleno CTA. Nunca texto sobre claro (2,1:1) */
+  --yv-gold-2:#e2bd8e;        /* CTA claro / texto sobre oscuro */
+  --yv-cream-2:#fbf6f0;       /* tarjetas */
+  --yv-white:#ffffff;
+  --yv-muted:#6b4a39;         /* texto secundario 6,5:1 sobre soft */
+  --yv-muted-dark:#cbb3a2;    /* texto secundario sobre brunette 8,8:1 */
+  --yv-cta-ink:#3a1c0d;       /* texto de botón sobre dorado 6,1:1 */
+  --yv-line:rgba(80,31,17,.14);
+  --yv-line-strong:rgba(80,31,17,.32);
+  --yv-line-dark:rgba(231,213,197,.18);
+
+  /* Estados WooCommerce — propuesta (AA sobre blanco y soft) */
+  --yv-error:#9b2c1f;   --yv-error-bg:#fbeceb;
+  --yv-success:#2e6b3f; --yv-success-bg:#eaf3ec;
+  --yv-warning:#7a4f00; --yv-warning-bg:#fbf2e0;
+  --yv-sale:var(--yv-mocha-maroon);
+
+  /* Tipografía */
+  --yv-font-display:'GC Amelie Promised','Playfair Display',Georgia,'Times New Roman',serif;
+  --yv-font-body:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --yv-fs-h1:clamp(2.3rem,5vw,3.7rem);
+  --yv-fs-h2:clamp(1.9rem,4vw,2.8rem);
+  --yv-fs-h3:clamp(1.25rem,2.2vw,1.5rem);
+  --yv-fs-lead:1.125rem;
+  --yv-fs-body:1rem;
+  --yv-fs-small:.875rem;
+  --yv-fs-micro:.75rem;
+  --yv-lh-body:1.6;
+  --yv-lh-heading:1.1;
+  --yv-tracking-caps:.14em;
+
+  /* Espaciado y layout */
+  --yv-maxw:1180px;
+  --yv-maxw-text:720px;
+  --yv-gutter:16px;
+  --yv-section:52px;
+  --yv-space-1:6px; --yv-space-2:10px; --yv-space-3:14px;
+  --yv-space-4:18px; --yv-space-5:26px; --yv-space-6:40px; --yv-space-7:64px;
+  --yv-header-h:64px;
+
+  /* Radios */
+  --yv-radius-lg:18px; --yv-radius-md:14px; --yv-radius-sm:10px; --yv-radius-pill:60px;
+
+  /* Sombras */
+  --yv-shadow:0 18px 50px -20px rgba(45,17,10,.45);
+  --yv-shadow-sm:0 6px 18px -10px rgba(45,17,10,.35);
+  --yv-shadow-cta:0 12px 28px -10px rgba(143,90,55,.7);
+
+  /* Movimiento */
+  --yv-ease:cubic-bezier(.2,.7,.2,1);
+  --yv-dur:.2s;
+
+  /* Foco */
+  --yv-focus:0 0 0 3px var(--yv-soft-blonde),0 0 0 5px var(--yv-mocha-maroon);
+}
+@media (min-width:768px){:root{--yv-gutter:24px;--yv-section:72px;--yv-header-h:72px}}
+@media (min-width:1280px){:root{--yv-section:88px}}
